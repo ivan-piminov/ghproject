@@ -1,13 +1,5 @@
-import {takeEvery, put, call, all} from 'redux-saga/effects'
-import {
-    ActionTypes,
-    CHANGE_NAME,
-    CHANGE_PAGE,
-    loadDataAC,
-    loaderStatusAC,
-    loadPageAC,
-    modalWindowStatusAC
-} from "./reducer";
+import {all, call, put, takeEvery} from 'redux-saga/effects'
+import {CHANGE_NAME, CHANGE_PAGE, loadDataAC, loaderStatusAC, loadPageAC, modalWindowStatusAC} from "./reducer";
 import {api} from "./api";
 import {ItemRep} from "./Types/type";
 

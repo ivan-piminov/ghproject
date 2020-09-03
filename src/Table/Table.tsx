@@ -8,30 +8,29 @@ import {AppStateType} from "../store";
 import {Dispatch} from "redux";
 
 
+const Table: React.FC = () => {
 
-const Table:React.FC = () => {
-
-    const name = useSelector((store:AppStateType) => store.companyInformation.nameCompany);
+    const name = useSelector((store: AppStateType) => store.companyInformation.nameCompany);
 
     const dispatch = useDispatch<Dispatch<ActionTypes>>();
 
-    const ChangeCurrentPage = (p:number):void => {
+    const ChangeCurrentPage = (p: number): void => {
         dispatch(newCurrentPageAC(name, p))
     };
 
     //Считывание необходимых значений из store через useSelector
 
-    const data = useSelector((store:AppStateType) => store.companyInformation.data);
+    const data = useSelector((store: AppStateType) => store.companyInformation.data);
 
-    const loaderStatus = useSelector((store:AppStateType) => store.companyInformation.loading);
+    const loaderStatus = useSelector((store: AppStateType) => store.companyInformation.loading);
 
-    const totalCompanyCount = useSelector((store:AppStateType) => store.companyInformation.totalCompanyCount);
+    const totalCompanyCount = useSelector((store: AppStateType) => store.companyInformation.totalCompanyCount);
 
-    const pageSize = useSelector((store:AppStateType) => store.companyInformation.pageSize);
+    const pageSize = useSelector((store: AppStateType) => store.companyInformation.pageSize);
 
-    const currentPage = useSelector((store:AppStateType) => store.companyInformation.currentPage);
+    const currentPage = useSelector((store: AppStateType) => store.companyInformation.currentPage);
 
-    const modalStatus = useSelector((store:AppStateType) => store.companyInformation.modalWindowStatus);
+    const modalStatus = useSelector((store: AppStateType) => store.companyInformation.modalWindowStatus);
 
     // начальный расчет для пагинации
 
@@ -54,8 +53,11 @@ const Table:React.FC = () => {
                 : <div>
                     <div>
                         {pages.map(p => {
-                            // @ts-ignore
-                            return <span className={currentPage === p && style.selectedPage} onClick={(e) => {
+                            const classes = [];
+                            if (currentPage === p) {
+                                classes.push(style.selectedPage)
+                            }
+                            return <span key={p} className={classes.join()} onClick={(e) => {
                                 ChangeCurrentPage(p)
                             }}>{p}</span>
                         })}

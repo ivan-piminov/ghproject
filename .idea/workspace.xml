@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f25fbe0a-f48d-4201-8f10-e0f8992520b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Types/type.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModalWindow/ModalWindow.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModalWindow/ModalWindow.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Search/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Search/Search.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Table/Table.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table/Table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sagas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Table/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table/Table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sagas.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +85,7 @@
       <workItem from="1599132503369" duration="552000" />
       <workItem from="1599133178371" duration="917000" />
       <workItem from="1599134123802" duration="7358000" />
-      <workItem from="1599143329302" duration="2658000" />
+      <workItem from="1599143329302" duration="3974000" />
     </task>
     <task id="LOCAL-00001" summary="add idea in gitignore">
       <created>1599027928642</created>
@@ -102,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599027928642</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add TypeScript">
+      <created>1599146936450</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1599146936450</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,16 +116,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add idea in gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add idea in gitignore" />
+    <MESSAGE value="add TypeScript" />
+    <option name="LAST_COMMIT_MESSAGE" value="add TypeScript" />
   </component>
   <component name="WindowStateProjectService">
     <state x="706" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599132617377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="706" y="323" key="#com.intellij.fileTypes.FileTypeChooser/1920.-226.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599132617377" />
-    <state x="2313" y="-219" key="CommitChangelistDialog2" timestamp="1599027926158">
-      <screen x="1920" y="-226" width="1536" height="832" />
+    <state x="491" y="9" key="CommitChangelistDialog2" timestamp="1599146934002">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="491" y="9" key="CommitChangelistDialog2/1920.-226.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599146934002" />
     <state x="2313" y="-219" key="CommitChangelistDialog2/1920.-226.1536.832/0.0.1920.1040@1920.-226.1536.832" timestamp="1599027926158" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1599135283305">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -152,10 +153,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="282" key="GridCell.Tab.0.right/1920.-226.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599131385574" />
-    <state x="451" y="181" key="Vcs.Push.Dialog.v2" timestamp="1599146892248">
+    <state x="451" y="181" key="Vcs.Push.Dialog.v2" timestamp="1599147008113">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="451" y="181" key="Vcs.Push.Dialog.v2/1920.-226.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599146892248" />
+    <state x="451" y="181" key="Vcs.Push.Dialog.v2/1920.-226.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599147008113" />
     <state x="2281" y="-81" key="Vcs.Push.Dialog.v2/1920.-226.1536.832/0.0.1920.1040@1920.-226.1536.832" timestamp="1599027941222" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1599139161276">
       <screen x="0" y="0" width="1920" height="1040" />
