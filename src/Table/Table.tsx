@@ -3,8 +3,8 @@ import {useDispatch, useSelector} from "react-redux";
 import Loader from "../Loader/Loader";
 import ModalWindow from "../ModalWindow/ModalWindow";
 import style from './Table.module.css'
-import {ActionTypes, newCurrentPageAC} from "../reducer";
-import {AppStateType} from "../store";
+import {ActionTypes, newCurrentPageAC} from "../BLL/reducer";
+import {AppStateType} from "../BLL/store";
 import {Dispatch} from "redux";
 
 

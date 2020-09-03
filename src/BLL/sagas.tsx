@@ -1,7 +1,7 @@
 import {all, call, put, takeEvery} from 'redux-saga/effects'
 import {CHANGE_NAME, CHANGE_PAGE, loadDataAC, loaderStatusAC, loadPageAC, modalWindowStatusAC} from "./reducer";
-import {api} from "./api";
-import {ItemRep} from "./Types/type";
+import {api} from "../API/api";
+import {ItemRep} from "../Types/type";
 
 // все watch-ры
 

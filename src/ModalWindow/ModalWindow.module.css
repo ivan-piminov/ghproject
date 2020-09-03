@@ -1,4 +1,4 @@
-.wrapperModal{
+.wrapperModal {
     width: 300px;
     height: 200px;
     background-color: white;
@@ -10,11 +10,12 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
-.textModal{
-text-align: center;
+
+.textModal {
+    text-align: center;
 }
 

@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f25fbe0a-f48d-4201-8f10-e0f8992520b2" name="Default Changelist" comment="">
+    <list default="true" id="f25fbe0a-f48d-4201-8f10-e0f8992520b2" name="Default Changelist" comment="refactoring code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Loader/Loader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loader/Loader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModalWindow/ModalWindow.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModalWindow/ModalWindow.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModalWindow/ModalWindow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModalWindow/ModalWindow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Search/Search.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Search/Search.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Search/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Table/Table.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table/Table.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Table/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table/Table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sagas.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Types/type.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Types/type.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/api.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/BLL/reducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sagas.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/BLL/sagas.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/BLL/store.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +58,10 @@
     <property name="ts.external.directory.path" value="D:\Study\testgh\ghproject\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Study\testgh\ghproject\src\BLL" />
+      <recent name="D:\Study\testgh\ghproject\src\API" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Study\ghproject\src\ModalWindow" />
       <recent name="D:\Study\ghproject\src\Table" />
@@ -85,7 +104,7 @@
       <workItem from="1599132503369" duration="552000" />
       <workItem from="1599133178371" duration="917000" />
       <workItem from="1599134123802" duration="7358000" />
-      <workItem from="1599143329302" duration="3974000" />
+      <workItem from="1599143329302" duration="5443000" />
     </task>
     <task id="LOCAL-00001" summary="add idea in gitignore">
       <created>1599027928642</created>
@@ -101,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599146936450</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refactoring code">
+      <created>1599148341160</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1599148341160</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,17 +143,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add idea in gitignore" />
     <MESSAGE value="add TypeScript" />
-    <option name="LAST_COMMIT_MESSAGE" value="add TypeScript" />
+    <MESSAGE value="refactoring code" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring code" />
   </component>
   <component name="WindowStateProjectService">
     <state x="706" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599132617377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="706" y="323" key="#com.intellij.fileTypes.FileTypeChooser/1920.-226.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599132617377" />
-    <state x="491" y="9" key="CommitChangelistDialog2" timestamp="1599146934002">
+    <state x="491" y="9" key="CommitChangelistDialog2" timestamp="1599149613229">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="491" y="9" key="CommitChangelistDialog2/1920.-226.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599146934002" />
+    <state x="491" y="9" key="CommitChangelistDialog2/1920.-226.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599149613229" />
     <state x="2313" y="-219" key="CommitChangelistDialog2/1920.-226.1536.832/0.0.1920.1040@1920.-226.1536.832" timestamp="1599027926158" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1599135283305">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -153,10 +180,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="282" key="GridCell.Tab.0.right/1920.-226.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599131385574" />
-    <state x="451" y="181" key="Vcs.Push.Dialog.v2" timestamp="1599147008113">
+    <state x="451" y="181" key="Vcs.Push.Dialog.v2" timestamp="1599149601443">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="451" y="181" key="Vcs.Push.Dialog.v2/1920.-226.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599147008113" />
+    <state x="451" y="181" key="Vcs.Push.Dialog.v2/1920.-226.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599149601443" />
     <state x="2281" y="-81" key="Vcs.Push.Dialog.v2/1920.-226.1536.832/0.0.1920.1040@1920.-226.1536.832" timestamp="1599027941222" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1599139161276">
       <screen x="0" y="0" width="1920" height="1040" />

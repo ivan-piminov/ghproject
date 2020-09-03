@@ -1,4 +1,4 @@
-import {ItemRep} from "./Types/type";
+import {ItemRep} from "../Types/type";
 
 export const SET_COMPANY = "SET-COMPANY";
 export const LOADER_STATUS = "LOADER-STATUS";
@@ -8,7 +8,7 @@ export const CHANGE_PAGE = "CHANGE-PAGE";
 export const SET_PAGE = "SET-PAGE";
 
 
- export type InitialStateType = {
+export type InitialStateType = {
     data: Array<ItemRep>
     loading: boolean
     totalCompanyCount: number,
@@ -62,7 +62,7 @@ const initialState: InitialStateType = {
     modalWindowStatus: false
 };
 
-const reducer = (state: InitialStateType = initialState, action:ActionTypes) => {
+const reducer = (state: InitialStateType = initialState, action: ActionTypes) => {
     switch (action.type) {
         case CHANGE_NAME:
             return {
@@ -139,15 +139,25 @@ type LoadDataPageActionType = {
     companyData: Array<ItemRep>
 }
 // action для модального окна и Preloader
-export const modalWindowStatusAC = (isActive: boolean): ModalWindowStatusActionType => ({type: MODAL_WINDOW_STATUS, isActive});
+export const modalWindowStatusAC = (isActive: boolean): ModalWindowStatusActionType => ({
+    type: MODAL_WINDOW_STATUS,
+    isActive
+});
 export const loaderStatusAC = (isActive: boolean): LoaderStatusActionType => ({type: LOADER_STATUS, isActive});
 
 // action для данных о компании
 export const newCompanyNameAC = (newName: string): SetNewCompanyActionType => ({type: CHANGE_NAME, newName});
-export const loadDataAC = (companyData: Array<ItemRep>): LoadDataCompanyActionType => ({type: SET_COMPANY, companyData});
+export const loadDataAC = (companyData: Array<ItemRep>): LoadDataCompanyActionType => ({
+    type: SET_COMPANY,
+    companyData
+});
 
 // action для данных при смене страницы
-export const newCurrentPageAC = (nameCompany: string, newPage: number): SetNewPageActionType => ({type: CHANGE_PAGE, nameCompany, newPage});
+export const newCurrentPageAC = (nameCompany: string, newPage: number): SetNewPageActionType => ({
+    type: CHANGE_PAGE,
+    nameCompany,
+    newPage
+});
 export const loadPageAC = (companyData: Array<ItemRep>): LoadDataPageActionType => ({type: SET_PAGE, companyData});
 
 

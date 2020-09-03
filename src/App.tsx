@@ -4,7 +4,7 @@ import Table from "./Table/Table";
 import Search from "./Search/Search";
 
 
-const App = () => {
+const App:React.FC = () => {
     return (
         <div className="container">
             <Search/>

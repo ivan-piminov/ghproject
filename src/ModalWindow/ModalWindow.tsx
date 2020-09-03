@@ -1,11 +1,11 @@
 import React from "react";
 import {useDispatch} from "react-redux";
-import {ActionTypes, modalWindowStatusAC} from "../reducer";
+import {ActionTypes, modalWindowStatusAC} from "../BLL/reducer";
 import style from './ModalWindow.module.css'
 import {Dispatch} from "redux";
 
 
-const ModalWindow = () => {
+const ModalWindow: React.FC = () => {
 
     const dispatch = useDispatch<Dispatch<ActionTypes>>();
 

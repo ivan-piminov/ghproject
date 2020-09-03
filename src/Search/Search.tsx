@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './Search.css';
-import {ActionTypes, newCompanyNameAC} from "../reducer";
+import {ActionTypes, newCompanyNameAC} from "../BLL/reducer";
 import {useDispatch} from "react-redux";
 import {Dispatch} from "redux";
 
