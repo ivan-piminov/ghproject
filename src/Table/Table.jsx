@@ -1,9 +1,9 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import Loader from "../Loader/Loader";
-import {getData} from "../reducer";
 import ModalWindow from "../ModalWindow/ModalWindow";
 import style from './Table.module.css'
+import {newCurrentPageAC} from "../reducer";
 
 
 const Table = () => {
@@ -13,7 +13,7 @@ const Table = () => {
     const dispatch = useDispatch();
 
     const ChangeCurrentPage = (p) => {
-        dispatch(getData(name, p))
+        dispatch(newCurrentPageAC(name, p))
     };
 
     //Считывание необходимых значений из store через useSelector
@@ -51,6 +51,7 @@ const Table = () => {
                 : <div>
                     <div>
                         {pages.map(p => {
+                            debugger
                             return <span className={currentPage === p && style.selectedPage} onClick={(e) => {
                                 ChangeCurrentPage(p)
                             }}>{p}</span>

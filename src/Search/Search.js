@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import './Search.css';
-import {getData} from "../reducer";
+import {newCompanyNameAC} from "../reducer";
 import {useDispatch} from "react-redux";
 
 
- // компонент поиска компании (считывание значения с инпута, dispatch назавания компании в store)
+// компонент поиска компании (считывание значения с инпута, dispatch назавания компании в store)
 const Search = () => {
     const [name, changeName] = useState('');
     const setNewName = (e) => {
@@ -14,7 +14,7 @@ const Search = () => {
     const dispatch = useDispatch();
 
     const findCompany = (name) => {
-        dispatch (getData(name))
+        dispatch(newCompanyNameAC(name))
     };
 
     return (

@@ -2,27 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f25fbe0a-f48d-4201-8f10-e0f8992520b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Loader/Loader.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Loader/Loader.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ModalWindow/ModalWindow.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ModalWindow/ModalWindow.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Search/Search.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Search/Search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Table/Table.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Table/Table.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sagas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModalWindow/ModalWindow.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModalWindow/ModalWindow.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Search/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Search/Search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Table/Table.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table/Table.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sagas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,12 +38,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/ModalWindow" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../todolist" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -92,34 +80,53 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598867713504</updated>
-      <workItem from="1598867715464" duration="49604000" />
+      <workItem from="1598867715464" duration="56466000" />
+      <workItem from="1599045412041" duration="271000" />
+      <workItem from="1599045716757" duration="194000" />
+      <workItem from="1599045974956" duration="30223000" />
     </task>
+    <task id="LOCAL-00001" summary="add idea in gitignore">
+      <created>1599027928642</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599027928642</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add idea in gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="add idea in gitignore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="706" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598966000071">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="706" y="323" key="#com.intellij.fileTypes.FileTypeChooser/1920.-226.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598966000071" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1598948136165">
+    <state x="2313" y="-219" key="CommitChangelistDialog2" timestamp="1599027926158">
+      <screen x="1920" y="-226" width="1536" height="832" />
+    </state>
+    <state x="2313" y="-219" key="CommitChangelistDialog2/1920.-226.1536.832/0.0.1920.1040@1920.-226.1536.832" timestamp="1599027926158" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1599078078989">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/1920.-226.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598948136165" />
+    <state x="740" y="275" key="FileChooserDialogImpl/1920.-226.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599078078989" />
     <state x="2559" y="80" key="Github.ShareDialog" timestamp="1599027813101">
       <screen x="1920" y="-226" width="1536" height="832" />
     </state>
     <state x="2559" y="80" key="Github.ShareDialog/1920.-226.1536.832/0.0.1920.1040@1920.-226.1536.832" timestamp="1599027813101" />
-    <state x="2281" y="-81" key="Vcs.Push.Dialog.v2" timestamp="1599027872664">
+    <state x="2281" y="-81" key="Vcs.Push.Dialog.v2" timestamp="1599027941222">
       <screen x="1920" y="-226" width="1536" height="832" />
     </state>
-    <state x="2281" y="-81" key="Vcs.Push.Dialog.v2/1920.-226.1536.832/0.0.1920.1040@1920.-226.1536.832" timestamp="1599027872664" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1598869078628">
+    <state x="2281" y="-81" key="Vcs.Push.Dialog.v2/1920.-226.1536.832/0.0.1920.1040@1920.-226.1536.832" timestamp="1599027941222" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1599116028084">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/1920.-226.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598869078628" />
+    <state x="616" y="240" key="run.anything.popup/1920.-226.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599116028084" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1598948218345">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

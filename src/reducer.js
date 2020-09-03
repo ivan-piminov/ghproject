@@ -1,9 +1,9 @@
-import {api} from "./api";
-
 export const SET_COMPANY = "SET-COMPANY";
-const LOADER_STATUS = "LOADER-STATUS";
-const CHANGE_NAME = "CHANGE-NAME";
-const MODAL_WINDOW_STATUS = "MODAL-WINDOW-STATUS";
+export const LOADER_STATUS = "LOADER-STATUS";
+export const CHANGE_NAME = "CHANGE-NAME";
+export const MODAL_WINDOW_STATUS = "MODAL-WINDOW-STATUS";
+export const CHANGE_PAGE = "CHANGE-PAGE";
+export const SET_PAGE = "SET-PAGE";
 
 const initialState = {
     data: [
@@ -50,22 +50,34 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
+        case CHANGE_NAME:
+            return {
+                ...state,
+                nameCompany: action.newName
+            };
         case SET_COMPANY:
             return {
                 ...state,
                 data: action.companyData,
                 loading: false,
-                currentPage: action.currentPage
             };
+        case CHANGE_PAGE:
+            return {
+                ...state,
+                nameCompany: action.nameCompany,
+                currentPage: action.newPage
+            };
+        case SET_PAGE:
+            return {
+                ...state,
+                data: action.companyData
+            };
+
+
         case LOADER_STATUS:
             return {
                 ...state,
                 loading: action.isActive
-            };
-        case CHANGE_NAME:
-            return {
-                ...state,
-                nameCompany: action.newName
             };
         case MODAL_WINDOW_STATUS:
             return {
@@ -80,27 +92,33 @@ export default reducer;
 
 //action creators
 
+// action для модального окна и Preloader
 export const modalWindowStatusAC = (isActive) => ({type: MODAL_WINDOW_STATUS, isActive});
+export const loaderStatusAC = (isActive) => ({type: LOADER_STATUS, isActive});
 
-const newCompanyNameAC = (newName) => ({type: CHANGE_NAME, newName});
+// action для данных о компании
+export const newCompanyNameAC = (newName) => ({type: CHANGE_NAME, newName});
+export const loadDataAC = (companyData, currentPage) => ({type: SET_COMPANY, companyData, currentPage});
 
-const loaderStatusAC = (isActive) => ({type: LOADER_STATUS, isActive});
+// action для данных при смене страницы
+export const newCurrentPageAC = (nameCompany, newPage) => ({type: CHANGE_PAGE, nameCompany, newPage});
+export const loadPageAC = (companyData) => ({type: SET_PAGE, companyData});
 
-const loadDataAC = (companyData, currentPage) => ({type: SET_COMPANY, companyData, currentPage});
 
 //thunk creators
 
-export const getData = (name, currentPage = 1) => (dispatch) => {
-    dispatch(loaderStatusAC(true));
-    dispatch(newCompanyNameAC(name));
-    api.getData(name, currentPage)
-        .then(res => {
-            dispatch(loadDataAC(res.data, currentPage));
-            dispatch(loaderStatusAC(false));
-            dispatch(modalWindowStatusAC(false))
-        })
-        .catch(res => {
-            dispatch(modalWindowStatusAC(true));
-            dispatch(loaderStatusAC(false))
-        })
-};
+// export const getData = (name, currentPage = 1) => (dispatch) => {
+//     dispatch(loaderStatusAC(true));
+//     dispatch(newCompanyNameAC(name));
+//     api.getData(name, currentPage)
+//         .then(res => {
+//             dispatch(loadDataAC(res.data, currentPage));
+//             dispatch(loaderStatusAC(false));
+//             dispatch(modalWindowStatusAC(false))
+//         })
+//         .catch(res => {
+//             dispatch(modalWindowStatusAC(true));
+//             dispatch(loaderStatusAC(false))
+//         })
+// };
+
