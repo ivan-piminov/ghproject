@@ -1,6 +1,15 @@
 import {takeEvery, put, call, all} from 'redux-saga/effects'
-import {CHANGE_NAME, CHANGE_PAGE, loadDataAC, loaderStatusAC, loadPageAC, modalWindowStatusAC} from "./reducer";
+import {
+    ActionTypes,
+    CHANGE_NAME,
+    CHANGE_PAGE,
+    loadDataAC,
+    loaderStatusAC,
+    loadPageAC,
+    modalWindowStatusAC
+} from "./reducer";
 import {api} from "./api";
+import {ItemRep} from "./Types/type";
 
 // все watch-ры
 
@@ -13,11 +22,16 @@ export function* watchAll() {
 
 // worker на загрузку данных о компании
 
-export function* workerLoadData(action) {
+type SetNewCompanyActionType = {
+    type: typeof CHANGE_NAME
+    newName: string
+}
+
+export function* workerLoadData(action:SetNewCompanyActionType):Generator {
     try {
         yield put(loaderStatusAC(true));
 
-        const res = yield call(loadData, action.newName);
+        const res:Array<ItemRep> | any = yield call(loadData, action.newName);
         yield put(loadDataAC(res.data));
 
         yield put(loaderStatusAC(false));
@@ -29,18 +43,24 @@ export function* workerLoadData(action) {
     }
 }
 
-export async function loadData(name, currentPage = 1) {
+export async function loadData(name:string, currentPage = 1) {
     return await api.getData(name, currentPage)
 }
 
 
 // worker на загрузку данных при смене страниц
 
-export function* workerLoadNewPage(action) {
+type SetNewPageActionType = {
+    type: typeof CHANGE_PAGE
+    nameCompany: string
+    newPage: number
+}
+
+export function* workerLoadNewPage(action:SetNewPageActionType):Generator {
     try {
         yield put(loaderStatusAC(true));
 
-        const res = yield call(loadNewPageData, action.nameCompany, action.newPage);
+        const res:Array<ItemRep> | any = yield call(loadNewPageData, action.nameCompany, action.newPage);
 
         yield put(loadPageAC(res.data));
 
@@ -53,7 +73,7 @@ export function* workerLoadNewPage(action) {
     }
 }
 
-export async function loadNewPageData(name, currentPage = 1) {
+export async function loadNewPageData(name:string, currentPage = 1) {
     return await api.getData(name, currentPage)
 }
 

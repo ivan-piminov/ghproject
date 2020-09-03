@@ -1,34 +1,37 @@
-import React from 'react';
+import * as React from 'react'
 import {useDispatch, useSelector} from "react-redux";
 import Loader from "../Loader/Loader";
 import ModalWindow from "../ModalWindow/ModalWindow";
 import style from './Table.module.css'
-import {newCurrentPageAC} from "../reducer";
+import {ActionTypes, newCurrentPageAC} from "../reducer";
+import {AppStateType} from "../store";
+import {Dispatch} from "redux";
 
 
-const Table = () => {
 
-    const name = useSelector((store) => store.companyInformation.nameCompany);
+const Table:React.FC = () => {
 
-    const dispatch = useDispatch();
+    const name = useSelector((store:AppStateType) => store.companyInformation.nameCompany);
 
-    const ChangeCurrentPage = (p) => {
+    const dispatch = useDispatch<Dispatch<ActionTypes>>();
+
+    const ChangeCurrentPage = (p:number):void => {
         dispatch(newCurrentPageAC(name, p))
     };
 
     //Считывание необходимых значений из store через useSelector
 
-    const data = useSelector((store) => store.companyInformation.data);
+    const data = useSelector((store:AppStateType) => store.companyInformation.data);
 
-    const loaderStatus = useSelector((store) => store.companyInformation.loading);
+    const loaderStatus = useSelector((store:AppStateType) => store.companyInformation.loading);
 
-    const totalCompanyCount = useSelector((store) => store.companyInformation.totalCompanyCount);
+    const totalCompanyCount = useSelector((store:AppStateType) => store.companyInformation.totalCompanyCount);
 
-    const pageSize = useSelector((store) => store.companyInformation.pageSize);
+    const pageSize = useSelector((store:AppStateType) => store.companyInformation.pageSize);
 
-    const currentPage = useSelector((store) => store.companyInformation.currentPage);
+    const currentPage = useSelector((store:AppStateType) => store.companyInformation.currentPage);
 
-    const modalStatus = useSelector((store) => store.companyInformation.modalWindowStatus);
+    const modalStatus = useSelector((store:AppStateType) => store.companyInformation.modalWindowStatus);
 
     // начальный расчет для пагинации
 
@@ -51,7 +54,7 @@ const Table = () => {
                 : <div>
                     <div>
                         {pages.map(p => {
-                            debugger
+                            // @ts-ignore
                             return <span className={currentPage === p && style.selectedPage} onClick={(e) => {
                                 ChangeCurrentPage(p)
                             }}>{p}</span>

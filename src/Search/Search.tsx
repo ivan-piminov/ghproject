@@ -1,19 +1,20 @@
 import React, {useState} from 'react';
 import './Search.css';
-import {newCompanyNameAC} from "../reducer";
+import {ActionTypes, newCompanyNameAC} from "../reducer";
 import {useDispatch} from "react-redux";
+import {Dispatch} from "redux";
 
 
 // компонент поиска компании (считывание значения с инпута, dispatch назавания компании в store)
-const Search = () => {
-    const [name, changeName] = useState('');
-    const setNewName = (e) => {
+const Search:React.FC = () => {
+    const [name, changeName] = useState<string>('');
+    const setNewName = (e:React.ChangeEvent<HTMLInputElement>):void => {
         changeName(e.currentTarget.value)
     };
 
-    const dispatch = useDispatch();
+    const dispatch = useDispatch<Dispatch<ActionTypes>>();
 
-    const findCompany = (name) => {
+    const findCompany = (name:string):void => {
         dispatch(newCompanyNameAC(name))
     };
 

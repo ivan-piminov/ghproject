@@ -1,3 +1,5 @@
+import {ItemRep} from "./Types/type";
+
 export const SET_COMPANY = "SET-COMPANY";
 export const LOADER_STATUS = "LOADER-STATUS";
 export const CHANGE_NAME = "CHANGE-NAME";
@@ -5,7 +7,19 @@ export const MODAL_WINDOW_STATUS = "MODAL-WINDOW-STATUS";
 export const CHANGE_PAGE = "CHANGE-PAGE";
 export const SET_PAGE = "SET-PAGE";
 
-const initialState = {
+
+ export type InitialStateType = {
+    data: Array<ItemRep>
+    loading: boolean
+    totalCompanyCount: number,
+    pageSize: number,
+    currentPage: number,
+    nameCompany: string,
+    modalWindowStatus: boolean
+}
+
+
+const initialState: InitialStateType = {
     data: [
         // {
         //     id: 1,
@@ -48,7 +62,7 @@ const initialState = {
     modalWindowStatus: false
 };
 
-const reducer = (state = initialState, action) => {
+const reducer = (state: InitialStateType = initialState, action:ActionTypes) => {
     switch (action.type) {
         case CHANGE_NAME:
             return {
@@ -72,8 +86,6 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 data: action.companyData
             };
-
-
         case LOADER_STATUS:
             return {
                 ...state,
@@ -92,33 +104,50 @@ export default reducer;
 
 //action creators
 
+export type ActionTypes =
+    ModalWindowStatusActionType
+    | LoaderStatusActionType
+    | SetNewCompanyActionType
+    | LoadDataCompanyActionType
+    | SetNewPageActionType
+    | LoadDataPageActionType
+
+type ModalWindowStatusActionType = {
+    type: typeof MODAL_WINDOW_STATUS
+    isActive: boolean
+}
+type LoaderStatusActionType = {
+    type: typeof LOADER_STATUS
+    isActive: boolean
+}
+type SetNewCompanyActionType = {
+    type: typeof CHANGE_NAME
+    newName: string
+}
+type LoadDataCompanyActionType = {
+    type: typeof SET_COMPANY
+    companyData: Array<ItemRep>
+
+}
+type SetNewPageActionType = {
+    type: typeof CHANGE_PAGE
+    nameCompany: string
+    newPage: number
+}
+type LoadDataPageActionType = {
+    type: typeof SET_PAGE
+    companyData: Array<ItemRep>
+}
 // action для модального окна и Preloader
-export const modalWindowStatusAC = (isActive) => ({type: MODAL_WINDOW_STATUS, isActive});
-export const loaderStatusAC = (isActive) => ({type: LOADER_STATUS, isActive});
+export const modalWindowStatusAC = (isActive: boolean): ModalWindowStatusActionType => ({type: MODAL_WINDOW_STATUS, isActive});
+export const loaderStatusAC = (isActive: boolean): LoaderStatusActionType => ({type: LOADER_STATUS, isActive});
 
 // action для данных о компании
-export const newCompanyNameAC = (newName) => ({type: CHANGE_NAME, newName});
-export const loadDataAC = (companyData, currentPage) => ({type: SET_COMPANY, companyData, currentPage});
+export const newCompanyNameAC = (newName: string): SetNewCompanyActionType => ({type: CHANGE_NAME, newName});
+export const loadDataAC = (companyData: Array<ItemRep>): LoadDataCompanyActionType => ({type: SET_COMPANY, companyData});
 
 // action для данных при смене страницы
-export const newCurrentPageAC = (nameCompany, newPage) => ({type: CHANGE_PAGE, nameCompany, newPage});
-export const loadPageAC = (companyData) => ({type: SET_PAGE, companyData});
+export const newCurrentPageAC = (nameCompany: string, newPage: number): SetNewPageActionType => ({type: CHANGE_PAGE, nameCompany, newPage});
+export const loadPageAC = (companyData: Array<ItemRep>): LoadDataPageActionType => ({type: SET_PAGE, companyData});
 
-
-//thunk creators
-
-// export const getData = (name, currentPage = 1) => (dispatch) => {
-//     dispatch(loaderStatusAC(true));
-//     dispatch(newCompanyNameAC(name));
-//     api.getData(name, currentPage)
-//         .then(res => {
-//             dispatch(loadDataAC(res.data, currentPage));
-//             dispatch(loaderStatusAC(false));
-//             dispatch(modalWindowStatusAC(false))
-//         })
-//         .catch(res => {
-//             dispatch(modalWindowStatusAC(true));
-//             dispatch(loaderStatusAC(false))
-//         })
-// };
 

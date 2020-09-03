@@ -8,6 +8,8 @@ const sagaMiddleware = createSagaMiddleware();
 const rootReducer = combineReducers({
     companyInformation: reducer
 });
+type RootReducerType = typeof rootReducer
+export type AppStateType = ReturnType<RootReducerType>
 const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
 
 export default store;
